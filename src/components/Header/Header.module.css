@@ -1,0 +1,48 @@
+.header {
+  background: linear-gradient(to right, var(--color-gray-900), var(--color-gray-800));
+  color: var(--color-white);
+  padding: 1rem 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.links {
+  display: none;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLinks a {
+  transition: color 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .links a {
+    transition: color 0.3s ease;
+  }
+
+  .links a:hover {
+    color: var(--color-primary);
+  }
+}

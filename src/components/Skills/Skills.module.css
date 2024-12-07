@@ -1,0 +1,111 @@
+.skills {
+  padding: 5rem 0;
+  background-color: var(--background-color);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--color-text-light);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.iconWrapper {
+  padding: 0.75rem;
+  background-color: var(--color-gray-100);
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.icon {
+  color: var(--color-primary);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.skillItem {
+  margin-bottom: 1rem;
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.skillName {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.skillLevel {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skillItem:hover .skillLevel {
+  opacity: 1;
+}
+
+.ratingBar {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.ratingUnit {
+  height: 0.5rem;
+  flex: 1;
+  border-radius: 9999px;
+}
+
+.ratingFilled {
+  background-color: var(--color-primary);
+}
+
+.ratingEmpty {
+  background-color: var(--color-gray-200);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
