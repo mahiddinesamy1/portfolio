@@ -1,18 +1,18 @@
 .header {
   background: linear-gradient(to right, var(--color-gray-950), var(--color-gray-850));
   color: var( --color-text);
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 

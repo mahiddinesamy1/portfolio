@@ -50,19 +50,18 @@ body, a, button, input, textarea {
 }
 
 .custom-cursor-dot {
-  width: 8px;
-  height: 8px;
+  width: 4px;
+  height: 4px;
   background-color: rgb(22, 88, 169);
   border-radius: 50%;
 }
 
 .custom-cursor-circle {
-  width: 90px;
-  height: 90px;
-
+  width: 60px;
+  height: 60px;
   border: 2px solid rgb(27, 60, 113);;
   border-radius: 50%;
-  transition: transform 0.3s ease-out;
+  transition: transform 1s  ease-in;
 }
 button:hover ~ .custom-cursor-circle,
 label:hover ~ .custom-cursor-circle {

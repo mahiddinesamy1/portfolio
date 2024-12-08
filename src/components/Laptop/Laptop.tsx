@@ -94,13 +94,13 @@ export function Laptop() {
           </div>
         ) : (
           <div className={styles.dock}>
-            <AppIcon icon={<User size={24} />} label="About" onClick={() => handleClick(<About />)} />
-            <AppIcon icon={<Brain size={24} />} label="Skills" onClick={() => handleClick(<Skills/>)} />
-            <AppIcon icon={<FileCode size={24} />} label="Projects" onClick={() => handleClick(<Projects/>)} />
-            <AppIcon icon={<Trophy size={24} />} label="Experience" onClick={() => handleClick(<Hero/>)} />
-            <AppIcon icon={<Github size={24} />} label="Github" href="https://github.com" />
-            <AppIcon icon={<Linkedin size={24} />} label="LinkedIn" href="https://linkedin.com" />
-            <AppIcon icon={<Twitter size={24} />} label="Twitter" href="https://twitter.com" />
+            <AppIcon icon={<User size={15} />} label="About" onClick={() => handleClick(<About />)} />
+            <AppIcon icon={<Brain size={15} />} label="Skills" onClick={() => handleClick(<Skills/>)} />
+            <AppIcon icon={<FileCode size={15} />} label="Projects" onClick={() => handleClick(<Projects/>)} />
+            <AppIcon icon={<Trophy size={15} />} label="Experience" onClick={() => handleClick(<Hero/>)} />
+            <AppIcon icon={<Github size={15} />} label="Github" href="https://github.com" />
+            <AppIcon icon={<Linkedin size={15} />} label="LinkedIn" href="https://linkedin.com" />
+            <AppIcon icon={<Twitter size={15} />} label="Twitter" href="https://twitter.com" />
           </div>
         )}
       </div>

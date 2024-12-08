@@ -6,8 +6,8 @@
   display: flex; /* Utilisation de Flexbox */
   justify-content: space-between; /* Positionner les éléments sur les côtés */
   align-items: center; /* Aligner verticalement au centre */
-  padding-left: 20rem; /* Ajout d'un espacement */
-  gap: 2rem; /* Espacement entre les éléments */
+  padding-left: 2rem; /* Ajout d'un espacement */
+  gap: 1rem; /* Espacement entre les éléments */
   z-index: -1;
 }
 
@@ -16,8 +16,8 @@
   display: flex;
   flex-direction: column; /* Empile le texte et l'image */
   align-items: flex-start; /* Aligne le contenu à gauche */
-  max-width: 40%; /* Limite la largeur de la section */
-  gap: 5rem; /* Espacement entre le texte et l'image */
+  max-width: 30%; /* Limite la largeur de la section */
+  gap: 1rem; /* Espacement entre le texte et l'image */
   z-index: 1;
 }
 
@@ -41,9 +41,9 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  max-width: 60%; /* Ajuster la largeur pour le laptop */
-  right: 10%;
-  margin-left: 10rem;
+  max-width: 70%; /* Ajuster la largeur pour le laptop */
+  right: 2rem;
+  margin-left: 2rem;
 }
 
 /* Conteneur Intérieur */
@@ -54,8 +54,9 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  max-width: 60%; /* Empêche de dépasser la largeur */
+  max-width: 80%; /* Empêche de dépasser la largeur */
   max-height: 100%; /* Empêche de dépasser la hauteur */
+  
 }
 
 /* Content Styling */
@@ -63,7 +64,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem; /* Taille adaptative */
+  font-size: 1rem; /* Taille adaptative */
 }
 
 /* Grille Responsive */
@@ -88,20 +89,20 @@
 .greeting {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  z-index: 10;
+  z-index: 1;
 }
 
 .heading {
-  font-size: 4rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  z-index: 10;
+  line-height: 1;
+  margin-bottom: 1rem;
+  z-index: 1;
 }
 
 /* Texte avec dégradé */
 .gradientText {
-  font-size: 4rem; /* Ajuster selon préférence */
+  font-size: 1rem; /* Ajuster selon préférence */
   font-weight: bold; /* Style en gras */
   background: linear-gradient(90deg, #081840, hsl(238, 100%, 51%)); /* Dégradé */
   -webkit-background-clip: text;
@@ -111,19 +112,19 @@
 
 /* Texte en surbrillance avec animation */
 .highlight {
-  font-size: 4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   background: linear-gradient(90deg, #0144ec, #6b7aa1, #2510df); /* Couleurs de dégradé */
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientMove 3s infinite;
-  z-index: 100;
+  z-index: 1;
 }
 
 /* Description du texte */
 .description {
-  font-size: 2rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
   z-index: 10;
 }
@@ -141,10 +142,12 @@
 /* Section des Stats */
 .stats {
   display: flex;
-  font-size: 1rem;
+  font-size: 0.8rem;
   justify-content: space-around;
   margin-top: 2rem;
   gap: 3rem;
+  max-width: 20rem;
+  flex-wrap: wrap;
 
 }
 
@@ -157,7 +160,7 @@
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   z-index: 10;
 }
 
@@ -197,13 +200,13 @@
   .imageContainer {
     margin-top: 0;
     width: 10%;
-    scale: 0.9;
+    scale: 0.8;
     display: flex;
     justify-content: center;
   }
 
   .laptopContainer {
-    padding-left: 10rem;
+    padding-left: 1rem;
     padding-right: 0rem;
   }
 }
