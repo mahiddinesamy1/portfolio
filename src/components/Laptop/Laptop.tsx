@@ -59,7 +59,7 @@ export function Laptop() {
   // Generate 50 random stars
 
   return (
-    <div className={styles.laptop}>
+    <section className={styles.laptop}>
       <div className={styles.screen}>
         {/* Space background */}
         <div className={styles.spaceBackground}/>
@@ -69,7 +69,7 @@ export function Laptop() {
         {/* Display Folders */}
         {!screenContent && (
           
-          <div className={styles.folders}>
+          <section className={styles.stacks}>
             <div className={styles.react}> </div>
             <div className={styles.express}> </div>
             <div className={styles.java}> </div>
@@ -78,17 +78,15 @@ export function Laptop() {
             <div className={styles.ts}> </div>
             <div className={styles.firebase}> </div>
             <div className={styles.docker}></div>
-          </div>
+          </section>
         )}
-        {!screenContent && (
-          <div className={styles.sam}> </div>
-        )}
+       
 
         {/* Screen Content */}
         {screenContent ? (
           <div className={styles.screenContent}>
             <button className={styles.backButton} onClick={handleBackClick}>
-              Back to Apps
+              Back
             </button>
             {screenContent}
           </div>
@@ -105,6 +103,6 @@ export function Laptop() {
         )}
       </div>
       <div className={styles.keyboard}></div>
-    </div>
+    </section>
   );
 }

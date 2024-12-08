@@ -12,12 +12,12 @@ export default function About() {
               en développement Full Stack avec une spécialisation en cybersécurité.
             </p>
             <p className={styles.paragraph}>
-              Mon parcours professionnel inclut des expériences enrichissantes chez des entreprises 
-              renommées comme STM, Workleap, et Desjardins, où j'ai développé des solutions 
-              innovantes tout en maintenant les plus hauts standards de sécurité.
+              Mon parcours professionnel inclue des expériences enrichissantes dans des entreprises 
+              renommées telles que STM, Workleap, et Desjardins, avec développement de solutions 
+              innovantes dans les standards de sécurité les plus  élevés.
             </p>
             <p className={styles.paragraph}>
-              Je suis passionné par la résolution de problèmes complexes et la création de 
+              Passionné par la résolution de problèmes complexes et la création de 
               solutions technologiques robustes et évolutives.
             </p>
           </div>

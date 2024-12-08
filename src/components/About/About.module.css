@@ -1,21 +1,20 @@
 .about {
-  padding: 5rem 0;
-  background-color: #00000062;
-}
-
-.container {
+  padding: 1rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 3rem;
-  max-width: 1600px;
+
   margin: 0 auto;
 }
 
 .title {
+  justify-self: center;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 0 1rem;
 }
 
 .content {
@@ -54,7 +53,19 @@
 }
 
 @media (min-width: 768px) {
-  .content {
+  .about {
     flex-direction: row;
+   
+  }
+}
+@media (min-width: 300px) {
+  .about {
+    padding: 1rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 0 auto;
   }
 }

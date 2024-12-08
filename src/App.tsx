@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Introduction from './components/Introduction/Introduction';
 import './styles/global.css';
 import { useEffect } from 'react';
+import { Laptop } from './components/Laptop/Laptop';
 
 function App() {
   useEffect(() => {
@@ -69,8 +70,12 @@ function App() {
       <div className="custom-cursor-dot"></div>
       <div className="custom-cursor-circle"></div>
       <Header />
-      <div>
+    <div>    
+      {/* Laptop */}
+      <section className="laptopContainer">
         <Introduction />
+        <Laptop />
+      </section>
         <Skills />
         <Projects />
         <Contact />

@@ -1,24 +1,18 @@
 /* General Container */
 .container {
-  height: 90vh; /* Pleine hauteur */
-  width: 100vw; /* Pleine largeur */
-  color: white;
-  display: flex; /* Utilisation de Flexbox */
-  justify-content: space-between; /* Positionner les éléments sur les côtés */
-  align-items: center; /* Aligner verticalement au centre */
-  padding-left: 2rem; /* Ajout d'un espacement */
-  gap: 1rem; /* Espacement entre les éléments */
-  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 /* Section du Texte et de l'Image */
 .textImageContainer {
+  flex-direction: column-reverse;
+  padding: 1rem 1rem;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column; /* Empile le texte et l'image */
-  align-items: flex-start; /* Aligne le contenu à gauche */
-  max-width: 30%; /* Limite la largeur de la section */
-  gap: 1rem; /* Espacement entre le texte et l'image */
-  z-index: 1;
+  flex-wrap: wrap;
+
 }
 
 /* Section de l'Image Fixée */
@@ -32,18 +26,16 @@
   position: absolute;
   top: 0; /* Colle l'image en haut de la page */
   left: 0; /* Colle l'image à gauche */
-  z-index: -1;
+
 }
 
 /* Section du Laptop */
 .laptopContainer {
+  padding: 1rem 1rem;
+
+  margin: 0 auto;
   display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  max-width: 70%; /* Ajuster la largeur pour le laptop */
-  right: 2rem;
-  margin-left: 2rem;
+  flex-wrap: wrap;
 }
 
 /* Conteneur Intérieur */
@@ -54,8 +46,8 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  max-width: 80%; /* Empêche de dépasser la largeur */
-  max-height: 100%; /* Empêche de dépasser la hauteur */
+  /* Empêche de dépasser la largeur */
+  /* Empêche de dépasser la hauteur */
   
 }
 
@@ -74,8 +66,7 @@
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  width: 100%; /* S'assure que la grille reste dans la page */
-  max-height: 80%;
+ 
 }
 
 /* Social Buttons */
@@ -89,7 +80,7 @@
 .greeting {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  z-index: 1;
+
 }
 
 .heading {
@@ -97,36 +88,37 @@
   font-weight: bold;
   line-height: 1;
   margin-bottom: 1rem;
-  z-index: 1;
+
 }
 
 /* Texte avec dégradé */
 .gradientText {
   font-size: 1rem; /* Ajuster selon préférence */
   font-weight: bold; /* Style en gras */
-  background: linear-gradient(90deg, #081840, hsl(238, 100%, 51%)); /* Dégradé */
+  background: linear-gradient(90deg, #0a41cc, hsl(217, 94%, 56%)); /* Dégradé */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* Rendre le dégradé visible dans le texte */
   text-align: center; /* Centrer le texte */
+  
+
 }
 
 /* Texte en surbrillance avec animation */
 .highlight {
   font-size: 1.5rem;
   font-weight: bold;
-  background: linear-gradient(90deg, #0144ec, #6b7aa1, #2510df); /* Couleurs de dégradé */
+  background: linear-gradient(90deg, #4a96ff, #6b7aa1, #2510df); /* Couleurs de dégradé */
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientMove 3s infinite;
-  z-index: 1;
+
 }
 
 /* Description du texte */
 .description {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
-  z-index: 10;
 }
 
 /* Animation des boutons sociaux */
@@ -141,13 +133,9 @@
 
 /* Section des Stats */
 .stats {
-  display: flex;
+  display: grid;
   font-size: 0.8rem;
-  justify-content: space-around;
-  margin-top: 2rem;
-  gap: 3rem;
-  max-width: 20rem;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
 
 }
 
@@ -161,7 +149,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  z-index: 10;
+
 }
 
 .primaryButton {
@@ -211,7 +199,19 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 508px) {
+  .container {
+    height: 50vh; /* Pleine hauteur */
+    width: 100vw; /* Pleine largeur */
+    color: white;
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: space-evenly; /* Positionner les éléments sur les côtés */
+    flex-wrap: wrap;
+    align-items: center; /* Aligner verticalement au centre */
+    padding-left: 2rem; /* Ajout d'un espacement */
+    gap: 1rem; /* Espacement entre les éléments */
+
+  }
   .imageContainer {
     margin-top: 0;
     width: 50%;

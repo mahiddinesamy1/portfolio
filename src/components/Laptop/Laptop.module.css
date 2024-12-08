@@ -2,16 +2,7 @@
 /* Laptop.module.css */
 
 /* Add styles for the project grid */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  padding: 0;
- 
-}
+
 
 
 .projectGrid {
@@ -22,17 +13,17 @@ body {
 
 }
 .laptop {
+  display: flex;
+  flex-direction: column;
+
   width: 60vw; /* Une largeur relative à la fenêtre */
   max-width: 80vw; /* Limite la largeur maximale */
   height:80vh; /* Une hauteur relative à la fenêtre */
   /* Évite qu'elle devienne trop grande */
- 
   border: 3px solid #333;
   border-radius: 50px;
   overflow: hidden;
   background-color: black;
-  display: flex;
-  flex-direction: column;
   position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
@@ -53,7 +44,7 @@ body {
   
 }
 .stats :hover {
-  transform: scaleX(1.1);
+  transform: scaleX(1.2);
   color: #60a5fa;
 }
 
@@ -79,16 +70,23 @@ body {
   flex: 1;
   position: relative;
   overflow: hidden;
-  background: black;
+  background: rgb(26, 26, 26);
   z-index: 0;
   overflow-y: auto;
 
   max-width: 100%; /* Prevent horizontal overflow */
   
 }
+.stacks {
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+  
+}
+.stacks :hover{
+  transform: scale(1.2);
+}
 .react {
- 
-
   background-image: url(./React.png);
   background-size: cover;
   background-position: center; /* Position the image */
@@ -189,8 +187,8 @@ body {
   background-size: cover;
   background-position: center; /* Position the image */
   background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-right: 5%;
   margin-top: 5%;
 }
@@ -214,8 +212,8 @@ body {
   width: 50%; /* Set relative to parent */
   margin-top: 10%;
   margin-left: 25%;
-  
-  max-width: 100%;
+  width: 50vh;
+  height: 100px;
   
 }
 
@@ -251,16 +249,16 @@ body {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  flex-wrap: nowrap; /* Empêche l'emballage du contenu */
-  gap: 10px;
-  padding: 10px 20px;
+  display: inline-flex;
+  flex-wrap: wrap; /* Empêche l'emballage du contenu */
+
+ width: 600px;
+ height: 100px;
   
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  width: 50%; /* Taille relative pour la cohérence */
-  max-width: 50%; /* Taille maximale */
-  justify-content: space-evenly;
+/* Taille maximale */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -394,7 +392,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   margin-left: 1rem;
-  margin-top: 5rem;
+  margin-top: 1rem;
   border-radius: 5px;
   position: absolute;
 }
@@ -410,3 +408,44 @@ body {
   border-top: 5px solid #222;
 }
 
+@media (max-width:850px)  {
+  .laptop {
+    display: flex;
+    flex-direction: column;
+    width: 92vw; /* Une largeur relative à la fenêtre */
+    max-width: 95vw; /* Limite la largeur maximale */
+    height:80vh; /* Une hauteur relative à la fenêtre */
+    /* Évite qu'elle devienne trop grande */
+    border: 3px solid #333;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  .dock {
+    position: absolute; /* Fixé en bas de l'écran */
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    flex-wrap: wrap; /* Empêche l'emballage du contenu */
+    width: 200px;
+    height: 100px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  /* Taille maximale */
+    justify-content: space-between;
+    align-items: center;
+  }
+  .stacks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Empêche l'emballage du contenu */
+    width: 150px;
+    height: 100px;
+    margin: 0 auto;
+   }
+  
+}
