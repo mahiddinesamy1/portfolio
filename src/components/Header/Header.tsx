@@ -14,13 +14,13 @@ export default function Header() {
         </div>
         <div className={styles.socialLinks}>
           <a href="https://github.com/mahiddinesamy1" target="_blank" rel="noopener noreferrer">
-            <Github size={24} />
+            <Github size={34} />
           </a>
           <a href="https://www.linkedin.com/in/samy-mahiddine/" target="_blank" rel="noopener noreferrer">
-            <Linkedin size={24} />
+            <Linkedin size={34} />
           </a>
           <a href="mailto:mahiddinesamy@gmail.com">
-            <Mail size={24} />
+            <Mail size={34} />
           </a>
         </div>
       </nav>

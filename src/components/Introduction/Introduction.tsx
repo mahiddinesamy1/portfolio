@@ -8,6 +8,7 @@ import samImage from './sam.png';
 export default function Introduction() {
   return (
     <div className={styles.container}>
+        
       {/* The background image is handled by styles.imageContainer */}
       {/* Texte et Image */}
       <div className={styles.textImageContainer}>
@@ -35,7 +36,7 @@ export default function Introduction() {
         
         </div> 
       </div>
-      <div className={styles.imageContainer} />
+
       {/* Laptop */}
       <div className={styles.laptopContainer}>
         <Laptop />

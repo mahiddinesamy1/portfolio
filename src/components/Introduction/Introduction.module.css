@@ -1,13 +1,14 @@
 /* General Container */
 .container {
-  height: 100vh; /* Pleine hauteur */
+  height: 90vh; /* Pleine hauteur */
   width: 100vw; /* Pleine largeur */
   color: white;
   display: flex; /* Utilisation de Flexbox */
   justify-content: space-between; /* Positionner les éléments sur les côtés */
   align-items: center; /* Aligner verticalement au centre */
-  padding: 2rem; /* Ajout d'un espacement */
+  padding-left: 20rem; /* Ajout d'un espacement */
   gap: 2rem; /* Espacement entre les éléments */
+  z-index: -1;
 }
 
 /* Section du Texte et de l'Image */
@@ -144,10 +145,10 @@
   justify-content: space-around;
   margin-top: 2rem;
   gap: 3rem;
-  z-index: 10;
+
 }
 
-.stats :hover {
+.stat :hover {
   transform: scaleX(1.1);
   color: #60a5fa;
 }
@@ -162,7 +163,7 @@
 
 .primaryButton {
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-grey);
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   transition: background-color 0.3s ease;
@@ -173,39 +174,19 @@
 }
 
 .secondaryButton {
-  border: 1px solid var(--color-white);
-  color: var(--color-white);
+  border: 1px solid var(--color-grey);
+  color: var(--color-grey);
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
 }
 
 .secondaryButton:hover {
-  background-color: var(--color-white);
+  background-color: var(--color-grey);
   color: var(--color-gray-900);
 }
 
-/* Animations */
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 10px #60a5fa, 0 0 20px #60a5fa;
-  }
-  100% {
-    text-shadow: 0 0 20px #60a5fa, 0 0 40px #60a5fa;
-  }
-}
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 /* Media Queries */
 @media (min-width: 1024px) {

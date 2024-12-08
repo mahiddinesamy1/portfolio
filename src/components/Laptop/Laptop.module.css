@@ -10,21 +10,8 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Évite tout défilement horizontal */
-  width: 100vw; /* Assure une largeur constante */
-  height: 100vh; /* Assure une hauteur constante */
+ 
 }
-
-.spaceBackground {
-  position: fixed; /* Fixe le fond pour qu'il reste dans les limites de la fenêtre */
-  top: 0;
-  left: 0;
-  width: 100vw; /* Toujours adapté à la largeur de l'écran */
-  height: 100vh; /* Toujours adapté à la hauteur de l'écran */
-  background: radial-gradient(circle at bottom, #1b2735, #090a0f);
-  z-index: -1;
-}
-
 
 
 .projectGrid {
@@ -37,10 +24,10 @@ body {
 .laptop {
   width: 80vw; /* Une largeur relative à la fenêtre */
   max-width: 1200px; /* Limite la largeur maximale */
-  height: 60vh; /* Une hauteur relative à la fenêtre */
+  height:100vh; /* Une hauteur relative à la fenêtre */
   min-height: 500px; /* Limite la hauteur minimale */
   max-height: 700px; /* Évite qu'elle devienne trop grande */
-  margin: 0 auto; /* Centrer horizontalement */
+ 
   border: 10px solid #333;
   border-radius: 50px;
   overflow: hidden;
@@ -51,16 +38,10 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.laptop .screen {
-  flex: 1;
-  overflow: auto; /* Permet un défilement si le contenu dépasse */
-  background: black;
-  z-index: 0;
-}
 
 .content{
   position: relative;
-  margin: 10rem 10rem;
+  margin: 1rem 1rem;
 
 }
 .stats {
@@ -101,18 +82,140 @@ body {
   overflow: hidden;
   background: black;
   z-index: 0;
+  overflow-y: auto;
+
   max-width: 100%; /* Prevent horizontal overflow */
   
 }
+.react {
+ 
 
+  background-image: url(./React.png);
+  background-size: cover;
+  background-position: center; /* Position the image */
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-right: 5%;
+  margin-top: 5%;
+
+
+}
+.ts {
+ 
+ 
+  background-image: url(./TS.png);
+  background-size: cover;
+  background-position: center; /* Position the image */
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-right: 5%;
+  margin-top: 5%;
+
+
+}
+.git {
+ 
+
+  background-image: url(./git.png);
+  background-size: cover;
+  background-position: center; /* Position the image */
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+.sql {
+ 
+
+  background-image: url(./sql.png);
+  background-size: cover;
+  background-position: center; /* Position the image */
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-right: 5%;
+  margin-top: 5%;
+
+
+}
+.express {
+ 
+
+  background-image: url(./express.png);
+  background-size: cover;
+  background-position: center; /* Position the image */
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-right: 5%;
+  margin-top: 5%;
+
+
+}
+.java {
+ 
+
+  background-image: url(./java.png);
+  background-size: cover;
+  background-position: center; /* Position the image */
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-right: 5%;
+  margin-top: 5%;
+
+
+}
+.docker {
+ 
+  
+  background-image: url(./docker.png);
+  background-size: cover;
+  background-position: center; /* Position the image */
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-right: 5%;
+  margin-top: 5%;
+
+
+}
+.firebase{
+   
+
+  background-image: url(./firebase.png);
+  background-size: cover;
+  background-position: center; /* Position the image */
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+.sam{
+  margin-top: 5rem;
+  background-image: url(./sam.png);
+  background-size:cover;
+  background-position: center; /* Position the image */
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 450px;
+
+}
 .folders {
   position: absolute;
-  top: 5%;
+  top: 1%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  width: 100%; /* Set relative to parent */
-  padding: 5% 5%;
+  width: 50%; /* Set relative to parent */
+  margin-top: 10%;
+  margin-left: 25%;
+  
   max-width: 100%;
   
 }
@@ -255,42 +358,6 @@ body {
 
 */
 
-.star {
-  position: relative;
-  width: 3px;
-  height: 3px;
-  background: white;
-  border-radius: 50%;
-  animation: twinkle 2s infinite ease-in-out;
-  opacity: 0.8;
-}
-
-/* Example stars positions */
-.star:nth-child(1) {
-  top: 10%;
-  left: 20%;
-}
-
-.star:nth-child(2) {
-  top: 15%;
-  left: 80%;
-}
-
-.star:nth-child(3) {
-  top: 40%;
-  left: 50%;
-}
-
-.star:nth-child(4) {
-  top: 70%;
-  left: 30%;
-}
-
-.star:nth-child(5) {
-  top: 85%;
-  left: 90%;
-}
-
 /* Twinkling effect */
 @keyframes twinkle {
   0%, 100% {
@@ -327,8 +394,10 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  margin: 20px;
+  margin-left: 1rem;
+  margin-top: 5rem;
   border-radius: 5px;
+  position: absolute;
 }
 
 .backButton:hover {

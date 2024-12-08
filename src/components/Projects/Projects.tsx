@@ -77,7 +77,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className={styles.projects}>
-      <div className="container mx-auto px-6">
+      <div className={styles.container}>
         <h2 className={styles.title}>Projets</h2>
         <div className={styles.grid}>
           {projects.map((project, index) => (

@@ -22,11 +22,7 @@ export default function Hero() {
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <img 
-            src="src/components/Hero/sam.png" 
-            alt="Samy Mahiddine"
-            
-          />
+    
         </div>
       </div>
     </section>

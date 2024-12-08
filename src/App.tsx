@@ -2,17 +2,17 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
-import Projects from  './components/Projects/';
+import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Introduction from './components/Introduction/Introduction';
 import './styles/global.css';
-import  { useEffect } from "react";
+import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    const dot = document.querySelector(".custom-cursor-dot") as HTMLElement;
-    const circle = document.querySelector(".custom-cursor-circle") as HTMLElement;
+    const dot = document.querySelector('.custom-cursor-dot') as HTMLElement;
+    const circle = document.querySelector('.custom-cursor-circle') as HTMLElement;
 
     let mouseX = 0; // Current mouse X position
     let mouseY = 0; // Current mouse Y position
@@ -42,25 +42,41 @@ function App() {
     };
 
     // Add event listener and start animation
-    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener('mousemove', onMouseMove);
     animateCircle();
 
     return () => {
-      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener('mousemove', onMouseMove);
     };
   }, []);
+
+  // Generate stars dynamically
+  const stars = Array.from({ length: 50 }).map((_, i) => (
+    <div
+      key={i}
+      className="star"
+      style={{
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`,
+      }}
+    ></div>
+  ));
+
   return (
     <div>
+      {/* Background container for stars */}
+      <div className="background-container">{stars}</div>
       <div className="custom-cursor-dot"></div>
       <div className="custom-cursor-circle"></div>
       <Header />
-      {/*<Hero />*/}
-      <Introduction />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+      <div>
+        <Introduction />
+        <Skills />
+        <Projects />
+        <Contact />
+        <About />
+        <Footer />
+      </div>
     </div>
   );
 }
